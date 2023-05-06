@@ -18,12 +18,18 @@ Req 1 -----------------> Resp 1
 ## Usage
 
 ```go
+package main
+
 import (
+	"net/http"
+
 	"go.eigsys.de/singleshot"
 )
 
-_ = http.Client{
-	Transport: singleshot.NewTransport(http.DefaultTransport),
+func main() {
+	_ = http.Client{
+		Transport: singleshot.NewTransport(http.DefaultTransport),
+	}
 }
 ```
 
