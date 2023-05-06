@@ -1,11 +1,11 @@
-// Package singleshot provides an http.RoundTripper which deduplicates similar HTTP requests.
+// Package singleshot provides a http.RoundTripper which de-duplicates similar HTTP requests.
 //
 // If two similar HTTP requests are supposed to be sent concurrently, the first one will actually be sent to the server, while the second one waits until the first one was fulfilled completely.
 // The second request will never be sent to the server, but returns a copy of the response of the first request.
 //
-//  Req 1 -----------------> Resp 1
-//               Req 2 ----> Resp 1'
-//                                  Req 3 -------------> Resp 3
+//	Req 1 -----------------> Resp 1
+//	             Req 2 ----> Resp 1'
+//	                                Req 3 -------------> Resp 3
 package singleshot
 
 import (
@@ -32,7 +32,7 @@ func NewTransport(transport http.RoundTripper) *Transport {
 	}
 }
 
-// RoundTrip deduplicates similar subsequential HTTP requests, if the first request of a kind
+// RoundTrip de-duplicates similar subsequent HTTP requests, if the first request of a kind
 // has not been completely fulfilled yet.
 //
 // Only "GET" requests (excluding "range" requests) are deduplicated, other requests are passed.
