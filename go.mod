@@ -1,4 +1,4 @@
-module github.com/joeig/singleshot
+module go.eigsys.de/singleshot
 
 go 1.16
 
