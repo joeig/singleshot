@@ -3,8 +3,8 @@
 Singleshot provides an `http.RoundTripper` which deduplicates similar HTTP requests.
 
 [![Build Status](https://github.com/joeig/singleshot/workflows/Tests/badge.svg)](https://github.com/joeig/singleshot/actions)
-[![Go Report Card](https://goreportcard.com/badge/github.com/joeig/singleshot)](https://goreportcard.com/report/github.com/joeig/singleshot)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/joeig/singleshot)](https://pkg.go.dev/github.com/joeig/singleshot)
+[![Go Report Card](https://goreportcard.com/badge/go.eigsys.de/singleshot)](https://goreportcard.com/report/go.eigsys.de/singleshot)
+[![PkgGoDev](https://pkg.go.dev/badge/go.eigsys.de/singleshot)](https://pkg.go.dev/go.eigsys.de/singleshot)
 
 If two similar HTTP requests are supposed to be sent concurrently, the first one will actually be sent to the server, while the second one waits until the first one was fulfilled completely.
 The second request will never be sent to the server, but returns a copy of the response of the first request.
@@ -19,7 +19,7 @@ Req 1 -----------------> Resp 1
 
 ```go
 import (
-	"github.com/joeig/singleshot"
+	"go.eigsys.de/singleshot"
 )
 
 _ = http.Client{
@@ -34,4 +34,4 @@ _ = http.Client{
 
 ## Documentation
 
-See [GoDoc](https://godoc.org/github.com/joeig/singleshot).
+See [GoDoc](https://godoc.org/go.eigsys.de/singleshot).

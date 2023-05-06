@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/joeig/singleshot"
+	"go.eigsys.de/singleshot"
 )
 
 func TestNewTransport(t *testing.T) {
