@@ -2,7 +2,6 @@
 
 Singleshot provides an `http.RoundTripper` which deduplicates similar HTTP requests.
 
-[![Tests](https://github.com/joeig/singleshot/actions/workflows/tests.yml/badge.svg)](https://github.com/joeig/singleshot/actions/workflows/tests.yml)
 [![Go Report Card](https://goreportcard.com/badge/go.eigsys.de/singleshot)](https://goreportcard.com/report/go.eigsys.de/singleshot)
 [![PkgGoDev](https://pkg.go.dev/badge/go.eigsys.de/singleshot)](https://pkg.go.dev/go.eigsys.de/singleshot)
 
