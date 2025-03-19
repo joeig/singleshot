@@ -8,10 +8,15 @@ Singleshot provides an `http.RoundTripper` which deduplicates similar HTTP reque
 If two similar HTTP requests are supposed to be sent concurrently, the first one will actually be sent to the server, while the second one waits until the first one was fulfilled completely.
 The second request will never be sent to the server, but returns a copy of the response of the first request.
 
-```text
-Req 1 -----------------> Resp 1
-             Req 2 ----> Resp 1'
-                                Req 3 -------------> Resp 3
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Server
+    
+    Client ->> +Server: Request 1
+    Note over Client: Identical, subsequent requests wait<br/>until Request 1 was fulfilled.
+    Client -> Client: Request 2
+    Server -->> -Client: Response 1, Response 2
 ```
 
 ## Usage
