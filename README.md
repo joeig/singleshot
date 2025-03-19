@@ -44,4 +44,4 @@ func main() {
 
 ## Documentation
 
-See [GoDoc](https://godoc.org/go.eigsys.de/singleshot).
+See [pkg.go.dev](https://pkg.go.dev/go.eigsys.de/singleshot).
